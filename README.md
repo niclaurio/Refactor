@@ -13,4 +13,4 @@ Version3.py: newer version
 Version4.py newest version
 
 
-plot.py: in this file I create the function to plot which of the 2 given version is faster
+plot.py: in this file I create the function to plot which of the 2 given version is faster; each plot is saved in a .png file
