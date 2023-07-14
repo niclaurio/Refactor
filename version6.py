@@ -1,6 +1,6 @@
 """
 refactor:
-    a logical deletion of primes ' multiples is faster
+    a logical deletion of primes ' multiples is faster.
 """
 import numpy as np
 from version1 import check_input

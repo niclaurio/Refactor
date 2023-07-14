@@ -6,6 +6,7 @@ import version2
 import version3
 import version4
 import version5
+import version6
 
 
 def get_execution_time(version, i: int,  use_milliseconds: bool) -> float:
@@ -18,8 +19,8 @@ def get_execution_time(version, i: int,  use_milliseconds: bool) -> float:
 
 
 def plot_versions(v1, v2, use_milliseconds: bool = False):
-    start = 10 ** 4
-    jump = 2 * 10 ** 4
+    start = 5*10 ** 2
+    jump = 10 ** 3
     end = start + 10 * jump
     v1_values = []
     v2_values = []
@@ -27,14 +28,12 @@ def plot_versions(v1, v2, use_milliseconds: bool = False):
     for i in range(start, end, jump):
         v1_values.append(get_execution_time(v1, i, use_milliseconds=use_milliseconds))
         v2_values.append(get_execution_time(v2, i, use_milliseconds=use_milliseconds))
-        print(i)
-    print('end')
     plt.plot(y, v1_values,color="blue", label="v1")
     plt.plot(y, v2_values, color="red", label="v2")
     plt.legend()
-    plt.savefig('version1 vs version2 .png')
+    plt.savefig('version5 vs version6 .png')
     plt.show()
 
 
-plot_versions(version1, version2)
 
+plot_versions(version5, version6)
